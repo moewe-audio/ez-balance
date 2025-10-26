@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ez-balance"
+version = "0.1.0"
+description = "CLI tool to plan ETF top-ups for a target allocation"
+readme = "README.md"
+authors = [{ name = "ez-balance" }]
+requires-python = ">=3.10"
+dependencies = [
+    "requests>=2.31",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7",
+]
+
+[project.scripts]
+ez-balance = "ez_balance.cli:main"
